@@ -6,7 +6,7 @@ import About from "./Pages/About.jsx";
 import Gallery from "./Pages/Gallery.jsx";
 import Navbar from "./componenets/Navbar.jsx";
 import Trips from "./Pages/Trips.jsx";
-import Contact from "./Pages/contact.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 function App() {
   const location = useLocation();
