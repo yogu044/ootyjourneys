@@ -1,0 +1,246 @@
+
+.about-page {
+  
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 5rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.section-text {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading-large {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #064e3b;
+  margin-bottom: 1.5rem;
+}
+
+.text-gray {
+  font-size: 1.25rem;
+  color: #4b5563; 
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+.card.section.mission-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 3rem;
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.06);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.mission-content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-image-container {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mission-image {
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 24px rgba(16,185,129,0.10);
+}
+
+@media (max-width: 1024px) {
+  .card.section.mission-card {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  .mission-image {
+    max-width: 100%;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .mission-image-container {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .card.section {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: left;
+  }
+  .card.section img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+
+.grid.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;         
+  margin-bottom: 2rem;    
+  color: #059669;          
+  width: 100%;
+  height: 3rem;
+}
+
+
+
+.section.achievements {
+  background: linear-gradient(to right, #059669, #047857);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  color: white;
+  margin-bottom: 5rem;
+}
+
+.section.achievements .heading-xl {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.grid.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.achievement-card {
+  text-align: center;
+}
+
+.achievement-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+  color: #fff;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  color: #e0f2fe;
+}
+
+
+.text-emerald {
+  color: #059669;
+  font-weight: 600;
+}
+
+.grid.grid-3 .card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 1rem;
+}
+
+.grid.grid-3 .card h3 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #064e3b;
+  margin-bottom: 0.5rem;
+}
+
+
+.grid.grid-4 .card {
+  padding: 2rem 1.25rem;
+}
+
+.grid.grid-4 .card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #064e3b;
+}
+.grid.grid-4 .card p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.heading-xl {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #064e3b;
+  margin-bottom: 1rem;
+}
+
+
+.section {
+  margin-bottom: 5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .section-text, .card, .section.achievements {
+    padding: 1.5rem;
+  }
+  .heading-large {
+    font-size: 2.5rem;
+  }
+  .heading-xl {
+    font-size: 2rem;
+  }
+  .text-lg {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,30 @@
+/* responsive.css - mobile-first */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+img,video{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:16px}
+
+/* layout helpers */
+.row{display:flex;flex-wrap:wrap;gap:16px}
+.col{flex:1 1 100%}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+
+/* typography */
+h1,h2,h3{margin:.5rem 0}
+p{margin:0 0 1rem}
+
+/* small phones (default): single column */
+/* tablets */
+@media(min-width:600px){
+  .col{flex:1 1 48%}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .container{padding:24px}
+}
+
+/* laptops & desktops */
+@media(min-width:1024px){
+  .col{flex:1 1 30%}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .container{padding:32px}
+  .nav{display:flex;align-items:center;gap:16px}
+}
