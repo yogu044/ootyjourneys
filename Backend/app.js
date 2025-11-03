@@ -15,12 +15,19 @@ const contactRouter = require('./routes/Conatcts');
 
 var app = express();
 
-// ✅ Add CORS configuration here
+const cors = require("cors");
+
+// ✅ Add this before your routes and after express setup
 app.use(cors({
-  origin: ["https://ootytours.netlify.app"], // your Netlify frontend
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: ["https://ootytours.netlify.app", "http://localhost:3000"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+// Handle preflight requests (important for browsers)
+app.options("*", cors());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
