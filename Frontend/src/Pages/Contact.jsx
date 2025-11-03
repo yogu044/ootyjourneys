@@ -25,7 +25,7 @@ const Contact = () => {
     setError(null);
 
     try {
-      const res = await axios.post("http://localhost:3000/contact/send", formData); 
+      const res = await axios.post("https://ootytravelsbackend.vercel.app/contact/send", formData); 
      
 
       if (res.status === 200) {
