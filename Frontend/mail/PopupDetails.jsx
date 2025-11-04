@@ -5,7 +5,7 @@ const PopupDetails = async (submitData) => {
   try {
     const response = await emailjs.send(
       "service_wkggwzi", 
-      "template_kqskxrl", 
+      "template_jgzg6du", 
       {
         name: submitData.name,
         email: submitData.email,
