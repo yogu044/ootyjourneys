@@ -25,7 +25,7 @@ const Contact = () => {
     setError(null);
 
     try {
-      const res = await axios.post("https://ootytravels.onrender.com/contact/send", formData); 
+      const res = await axios.post("https://ooty-travels.onrender.com/contact/send", formData); 
      
 
       if (res.status === 200) {
