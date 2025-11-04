@@ -1,7 +1,9 @@
 // /mail/PopupDetails.js
 import emailjs from "@emailjs/browser";
+import { use } from "react";
 
 const ContactDetails = async (submitData) => {
+  const navigate=useNavigate();
   try {
     const response = await emailjs.send(
       "service_wkggwzi", 
@@ -17,7 +19,9 @@ const ContactDetails = async (submitData) => {
     alert(" Message sent successfully! We'll contact you soon.");
 
     console.log(" Email sent successfully:", response.status, response.text);
+
     return { data: { message: "Booking details sent successfully!" } };
+    navigate("/home");
   } catch (error) {
     console.error(" Email sending failed:", error);
     throw { response: { data: { message: "Email sending failed!" } } };
