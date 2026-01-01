@@ -61,7 +61,7 @@ export default function Footer() {
             <h4 className="footer-heading">Follow Us</h4>
             <div className="footer-socials">
               <a href="https://www.facebook.com/profile.php?id=61585734669548"><Facebook /></a>
-              <a href="https://www.instagram.com/ootyt.ours"><Instagram /></a>
+              <a href="https://www.instagram.com/ootyjourneys/"><Instagram /></a>
               
             </div>
             <p className="footer-note">
