@@ -49,10 +49,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
             <div className="footer-links">
-              <a onClick={() => navigate("/trip")} style={{ cursor: "pointer" }}>Hill Station Tours</a>
-              <a onClick={() => navigate("/trip")} style={{ cursor: "pointer" }}>Tea Garden Visits</a>
-              <a onClick={() => navigate("/trip")} style={{ cursor: "pointer" }}>Botanical Gardens</a>
-              <a onClick={() => navigate("/trip")} style={{ cursor: "pointer" }}>Lake Boating</a>
+              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Hill Station Tours</a>
+              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Tea Garden Visits</a>
+              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Botanical Gardens</a>
+              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Lake Boating</a>
             </div>
           </div>
 
