@@ -246,3 +246,14 @@ html, body {
     gap: 1.5rem;
   }
 }
+/* Destination button – color fix only */
+.destination-button {
+  background: linear-gradient(to right, #10b981, #059669); /* btn-primary color */
+  color: #ffffff;
+  border: none;
+}
+
+/* Optional: keep text readable on hover (no size/animation change) */
+.destination-button:hover {
+  background: linear-gradient(to right, #059669, #047857);
+}
