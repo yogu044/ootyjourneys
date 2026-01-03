@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="footer-list">
               <div className="footer-item">
                 <Phone className="icon" />
-                <span>+91 99441 94878</span>
+                <span>+91 98945 99399</span>
               </div>
               <div className="footer-item">
                 <Mail className="icon" />

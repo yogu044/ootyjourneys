@@ -54,9 +54,9 @@ export default function About() {
 
         {/* Intro Section */}
         <div className="section-text">
-          <h2 className="heading-large">About Ooty Tours</h2>
+          <h2 className="heading-large">About Ooty Journeys</h2>
           <p className="text-gray">
-            Ooty Tours is your trusted partner for exploring the breathtaking beauty of the Queen of Hills. 
+            Ooty Journeys is your trusted partner for exploring the breathtaking beauty of the Queen of Hills. 
             We specialize in curated travel experiences that combine adventure, comfort, and nature.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function About() {
           <div className="mission-content">
             <h2 className="heading-xl">Our Mission</h2>
             <p className="text-lg">
-             Ooty Tours was founded on the belief that travelers must explore, because life is short and the world is huge. 
+             Ooty Journeys was founded on the belief that travelers must explore, because life is short and the world is huge. 
              We are dedicated to creating authentic and memorable journeys that allow people to experience the true beauty of Ooty while preserving 
              its natural charm. Our goal is to ensure every trip is peaceful, safe, and deeply enriching.
             </p>

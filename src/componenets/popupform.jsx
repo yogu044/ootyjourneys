@@ -6,14 +6,23 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import PopupDetails from '../../mail/PopupDetails';
 
+/* ---------- DATE FORMATTER (NO TIME, NO TIMEZONE) ---------- */
+const formatDateOnly = (date) => {
+  if (!date) return "";
+  const yyyy = date.getFullYear();
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+};
+
 export default function PopupForm() {
   const navigate = useNavigate();
   const [pop, setpop] = useState(true);
+
   const [formdata, setformdata] = useState({
     name: '',
     email: '',
     phone: '',
-    
     checkin: null,
     checkout: null,
     adult: '1',
@@ -25,12 +34,12 @@ export default function PopupForm() {
     try {
       const submitData = {
         ...formdata,
-        checkin: formdata.checkin ? formdata.checkin.toISOString() : '',
-        checkout: formdata.checkout ? formdata.checkout.toISOString() : ''
+        checkin: formatDateOnly(formdata.checkin),     // ✅ FIXED
+        checkout: formatDateOnly(formdata.checkout)    // ✅ FIXED
       };
 
       const res = await PopupDetails(submitData);
-      alert(res.message || "Details Sended successfully!");
+      alert(res.message || "Details Sent successfully!");
       navigate('/home');
     } catch (error) {
       alert(error.response?.data?.message || "Registration failed");
@@ -78,37 +87,57 @@ export default function PopupForm() {
 
         <form onSubmit={handleSubmit} className="popup-form">
           <label>Full Name</label>
-          <input type="text" name="name" placeholder="Enter your full name" value={formdata.name} onChange={handleChange} />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            value={formdata.name}
+            onChange={handleChange}
+          />
 
           <label>Email Address</label>
-          <input type="email" name="email" placeholder="your@email.com" value={formdata.email} onChange={handleChange} />
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            value={formdata.email}
+            onChange={handleChange}
+          />
 
           <label>Phone Number</label>
-          <input type="text" name="phone" placeholder="+91 923xx 34xxx" value={formdata.phone} onChange={handleChange} />
+          <input
+            type="text"
+            name="phone"
+            placeholder="+91 923xx 34xxx"
+            value={formdata.phone}
+            onChange={handleChange}
+          />
 
           <label>Check-in Date</label>
           <DatePicker
-          className="popup-form-input"
+            className="popup-form-input"
             selected={formdata.checkin}
             onChange={handleCheckinChange}
             minDate={new Date()}
             placeholderText="Select check-in"
             dateFormat="yyyy-MM-dd"
+            showTimeSelect={false}
+            showTimeInput={false}
             name="checkin"
           />
-          <br></br>
 
           <label>Check-out Date</label>
           <DatePicker
-          className="popup-form-input"
+            className="popup-form-input"
             selected={formdata.checkout}
             onChange={handleCheckoutChange}
             minDate={formdata.checkin || new Date()}
             placeholderText="Select check-out"
             dateFormat="yyyy-MM-dd"
+            showTimeSelect={false}
+            showTimeInput={false}
             name="checkout"
           />
-          <br></br>
 
           <label>Adults</label>
           <select name="adult" value={formdata.adult} onChange={handleChange}>
@@ -123,13 +152,17 @@ export default function PopupForm() {
             <option value="0">0 children</option>
             <option value="1">1 child</option>
             <option value="2">2 children</option>
-            <option value="3">3 children</option>
+            <option value="3">3+ children</option>
           </select>
 
-          <button type="submit" className="popup-submit">Start My Eco Journey</button>
+          <button type="submit" className="popup-submit">
+            Start My Eco Journey
+          </button>
         </form>
 
-        <p className="popup-footer">By submitting, you agree to our eco-friendly travel principles</p>
+        <p className="popup-footer">
+          By submitting, you agree to our eco-friendly travel principles
+        </p>
       </div>
     </div>
   );

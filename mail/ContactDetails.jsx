@@ -2,10 +2,10 @@
 
 const ContactDetails = async (submitData) => {
   try {
-    const phoneNumber = "919944194878"; 
+    const phoneNumber = "919894599399"; 
 
     const message = `
-Hello Ooty Tours 
+Hello Ooty Journeys 
 
 Name: ${submitData.name}
 Email: ${submitData.email}

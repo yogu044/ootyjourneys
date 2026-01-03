@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
 
       <h2>Contact</h2>
       <p>
-        Phone: +91 99441 94878 <br />
+        Phone: +91 98945 99399 <br />
         Email: ootyjourneys@gmail.com
       </p>
     </div>

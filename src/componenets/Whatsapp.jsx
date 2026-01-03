@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WhatsAppButton() {
-  const phone = "919944194878";
+  const phone = "919894599399";
   const message = "Hi, I want to know about Ooty tour packages";
 
   return (

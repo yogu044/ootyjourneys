@@ -45,7 +45,7 @@ const Contact = () => {
     {
       icon: <Phone className="icon" />,
       title: 'Phone',
-      details: '+91 99441 94878',
+      details: '+91 98945 99399',
       subtitle: 'Mon-Fri 9AM-6PM IST'
     },
     {
@@ -183,25 +183,7 @@ const Contact = () => {
             <div className="emergency-contact">
               <h3>24/7 Emergency Support</h3>
               <p>For travelers currently on tours</p>
-              <p className="emergency-number">+91 99441 94878</p>
-            </div>
-
-            <div className="office-map">
-              <div className="map-placeholder">
-                
-                <p>Visit our Ooty office</p>
-                <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.759902772909!2d76.69358147499767!3d11.418274847027012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd999b6fcf0f%3A0x6020ba01e18fbbdd!2s233%2C%20Havelock%20Rd%2C%20Police%20Quarters%2C%20Pudumund%2C%20Ooty%2C%20Tamil%20Nadu%20643001!5e1!3m2!1sen!2sin!4v1767260492561"
-        width="100%"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Ooty Office Location"
-      ></iframe>
-                
-              </div>
+              <p className="emergency-number">+91 98945 99399</p>
             </div>
           </div>
         </div>

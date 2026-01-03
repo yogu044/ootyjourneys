@@ -40,7 +40,7 @@ export default function TermsAndConditions() {
 
       <h2>6. Contact</h2>
       <p>
-        Phone: +91 99441 94878 <br />
+        Phone: +91 98945 99399 <br />
         Email: ootyjourneys@gmail.com
       </p>
     </div>
