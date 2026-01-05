@@ -1,8 +1,55 @@
 [build]
-  command = "npm run build"
-  publish = "dist"  
+command = "npm run build"
+publish = "dist"
+
+# 🔒 Block common attack paths FIRST
+[[redirects]]
+from = "/.env"
+to = "/404"
+status = 404
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*.env"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/.git/*"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/wp-admin/*"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/wordpress/*"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/wp-login.php"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/xmlrpc.php"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/backend/*"
+to = "/404"
+status = 404
+
+[[redirects]]
+from = "/admin/*"
+to = "/404"
+status = 404
+
+# ✅ SPA fallback (MUST BE LAST)
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
