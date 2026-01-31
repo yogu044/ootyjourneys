@@ -9,7 +9,7 @@ export default function TermsAndConditions() {
 
       <h2>1. About Us</h2>
       <p>
-        Ooty Tours provides travel information, tour packages, and booking
+        Ooty Journeys provides travel information, tour packages, and booking
         assistance for destinations in and around Ooty, Tamil Nadu.
       </p>
 
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
 
       <h2>5. Liability</h2>
       <p>
-        Ooty Tours is not responsible for delays, natural calamities, or
+        Ooty Journeys is not responsible for delays, natural calamities, or
         third-party failures.
       </p>
 
