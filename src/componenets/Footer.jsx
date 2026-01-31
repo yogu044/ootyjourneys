@@ -1,17 +1,15 @@
 import React from 'react';
-import { Leaf, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
-import "../css/footer.css"
-import image from "../assets/logo.png"
-import { useNavigate } from 'react-router-dom';
-
-
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import "../css/footer.css";
+import image from "../assets/logo.png";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const navigate=useNavigate();
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
+
           {/* Company Info */}
           <div className="footer-section">
             <div className="footer-brand">
@@ -22,26 +20,17 @@ export default function Footer() {
               </div>
             </div>
             <p className="footer-text">
-              Discover the beauty of Ooty with our carefully curated hill station experiences. We're committed to showcasing the Queen of Hills in all its natural splendor.
+              Discover the beauty of Ooty with our carefully curated hill station experiences.
             </p>
           </div>
 
-        
+          {/* Contact */}
           <div className="footer-section">
             <h4 className="footer-heading">Contact Us</h4>
             <div className="footer-list">
-              <div className="footer-item">
-                <Phone className="icon" />
-                <span>+91 98945 99399</span>
-              </div>
-              <div className="footer-item">
-                <Mail className="icon" />
-                <span>ootyjourneys@gmail.com</span>
-              </div>
-              <div className="footer-item">
-                <MapPin className="icon" />
-                <span>Ooty</span>
-              </div>
+              <div className="footer-item"><Phone className="icon" /> +91 98945 99399</div>
+              <div className="footer-item"><Mail className="icon" /> ootyjourneys@gmail.com</div>
+              <div className="footer-item"><MapPin className="icon" /> Ooty</div>
             </div>
           </div>
 
@@ -49,39 +38,40 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
             <div className="footer-links">
-              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Hill Station Tours</a>
-              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Tea Garden Visits</a>
-              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Botanical Gardens</a>
-              <a onClick={() => navigate("/activity")} style={{ cursor: "pointer" }}>Lake Boating</a>
+              <Link to="/activity">Hill Station Tours</Link>
+              <Link to="/activity">Tea Garden Visits</Link>
+              <Link to="/activity">Botanical Gardens</Link>
+              <Link to="/activity">Lake Boating</Link>
             </div>
           </div>
 
-          {/* Social Media */}
+          {/* Social */}
           <div className="footer-section">
             <h4 className="footer-heading">Follow Us</h4>
             <div className="footer-socials">
-              <a href="https://www.facebook.com/profile.php?id=61585734669548"><Facebook /></a>
-              <a href="https://www.instagram.com/ootyjourneys/"><Instagram /></a>
-              
+              <a href="https://www.facebook.com/profile.php?id=61585734669548" target="_blank" rel="noreferrer">
+                <Facebook />
+              </a>
+              <a href="https://www.instagram.com/ootyjourneys/" target="_blank" rel="noreferrer">
+                <Instagram />
+              </a>
             </div>
             <p className="footer-note">
-              Join our community for eco-travel inspiration and sustainable adventure tips.
+              Join our community for eco-travel inspiration.
             </p>
           </div>
+
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom */}
         <div className="footer-bottom">
           <p>© 2026 OotyJourneys. All rights reserved.</p>
         </div>
+
         <div className="footer-legal">
-          <span onClick={() => navigate('/terms')} className="legal-link">
-            Terms & Conditions
-          </span>
+          <Link to="/terms" className="legal-link">Terms & Conditions</Link>
           <span className="legal-separator">|</span>
-          <span onClick={() => navigate('/privacy')} className="legal-link">
-            Privacy Policy
-          </span>
+          <Link to="/privacy" className="legal-link">Privacy Policy</Link>
         </div>
 
       </div>
